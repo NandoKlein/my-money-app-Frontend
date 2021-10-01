@@ -28,7 +28,7 @@ module.exports = {
         new ExtractTextPlugin('app.css')
     ],
     module: {
-        loaders:[{
+        loaders: [{
             test: /.js[x]?$/,
             loader: 'babel-loader',
             exclude: /node_modules/,
@@ -37,12 +37,12 @@ module.exports = {
                 plugins: ['transform-object-rest-spread']
             }
         },
-    {
-        test: /\.css$/,
-        loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
-    },{
-        test: /\.woff|.woff2|.ttf|.eot|.svg|.png|.jpg*.*$/,
-        loader: 'file'
-    }]
+        {
+            test: /\.css$/,
+            loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
+        }, {
+            test: /\.woff|.woff2|.ttf|.eot|.svg|.png|.jpg*.*$/,
+            loader: 'file'
+        }]
     }
 }
